@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
     int fd;
     char buffer[MAX_LINE];
     int bytes;
-    
+
     if (argc == 1) {
         fd = 0;
         while ((bytes = read(fd, buffer, MAX_LINE)) > 0) {
@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
         }
         if (bytes < 0) {
             perror("read");
-            return 1;
+            return 1;   
         }
     } else {
         for (int i = 1; i < argc; ++i) {
